@@ -1,6 +1,9 @@
 ---
-title: download
+title: install
 ---
+
+## Download
+[download])(https://github.com/HfMT-ZM4/drawsocket)
 
 ## Installation
 
