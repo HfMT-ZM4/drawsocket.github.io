@@ -1,7 +1,4 @@
 
-## Use in production
-
-Note: Drawsocket has been used in large scale production, but as with all technology, **the system must be tested before use in prodution**. Users are advised to thoroughly test your production network and display devices before any live performance.
 
 ## Installation
 
@@ -23,3 +20,8 @@ See the `hfmt.drawsocket.maxhelp` file for examples.
     * For example, if the IP:Port is `192.168.1.1:3002`, and you wanted to use the address `/foo` for your OSC style messaging to the browser, you could type the following address into your browser: `192.168.1.1:3002/foo`. Note that if you are testing on the same computer, you can also use `localhost` instead of the IP address.
 
 For usage with [MaxScore](http://www.computermusicnotation.com/?page_id=22), please see `Drawsocket` folder in the Max Extras menu, example number 8, `render2browser.maxscore`.
+
+
+## Use in production
+
+Note: Drawsocket has been used in large scale production, but as with all technology, **the system must be tested before use in prodution**. Users are advised to thoroughly test your production network and display devices before any live performance.
