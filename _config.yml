@@ -3,5 +3,7 @@ github:
   repository_url: https://github.com/HfMT-ZM4/drawsocket
 
 project-name: drawsocket
+project-tagline: A Max/node.js based server/client system for drawing to web-browsers. Created at the Hamburg University of Music and Drama within the Stage_2.0 project.
+
 title: drawsocket
 # logo: # filename of a logo image that has been placed into your images directory
