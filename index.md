@@ -1,5 +1,13 @@
 
-<a target="_self" href="installation.md">installation html</a>
 
 
 [API](api.md)
+
+<div id="foo"></div>
+
+
+<script>
+    window.onload = () => {
+        document.getElementById("foo").innerHTML = "cool this works too";
+    }
+</script>
