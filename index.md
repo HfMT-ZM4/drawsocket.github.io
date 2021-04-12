@@ -1,5 +1,5 @@
 
-[instalation](installation.md)
+[installation](installation.md)
 
 # Drawsocket
 
