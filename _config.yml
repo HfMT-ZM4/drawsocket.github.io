@@ -2,7 +2,6 @@ theme: jekyll-theme-cayman
 github:
   repository_url: https://github.com/HfMT-ZM4/drawsocket
 
-project-name: 'Drawsocket'
-tagline: 'server/client plaform for realtime browser-based media'
 title: 'Drawsocket'
+tagline: 'server/client plaform for realtime browser-based media'
 # logo: # filename of a logo image that has been placed into your images directory
