@@ -1,3 +1,6 @@
+
+[instalation](installation.md)
+
 # Drawsocket
 
 A Max/node.js based server/client system for drawing to web-browsers.
