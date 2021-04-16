@@ -55,7 +55,7 @@ header {
 }
 
 #api_menu li:hover {
-    color: blue;
+    color: hotpink;
     cursor: pointer;
 }
 
