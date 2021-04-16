@@ -63,8 +63,8 @@ header {
     left: 300px;
     width: calc(100% - 300px - var(--side-margin));
     overflow-x: hidden;
-    padding-top: 4em;
-    margin-top: -4em;
+    scroll-margin-top: var(--top-menu-height);
+
 
 }
 
