@@ -59,10 +59,12 @@ header {
 #main_text {
     position: absolute;
     display: inline-block;
-    margin-top: var(--top-menu-height);
+    top: var(--top-menu-height);
     left: 300px;
     width: calc(100% - 300px - var(--side-margin));
     overflow-x: hidden;
+    padding-top: 4em;
+    margin-top: -4em;
 
 }
 
