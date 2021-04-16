@@ -63,10 +63,17 @@ header {
     left: 300px;
     width: calc(100% - 300px - var(--side-margin));
     overflow-x: hidden;
-    scroll-margin-top: var(--top-menu-height);
-
-
 }
+
+.api_key::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -285px; 
+    height: 285px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
 
 code {
     color: black;
