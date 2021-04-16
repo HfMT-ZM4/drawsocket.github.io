@@ -931,7 +931,3 @@ For example, here is a button that sends a message to another client on being cl
   		/fill : "red"
   }
   ```
-
-</div>
-
-<script src="./api-menu.js"></script>
