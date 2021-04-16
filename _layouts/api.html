@@ -20,7 +20,7 @@ window.addEventListener("load", ()=>{
 
         menuItem.addEventListener("click", ()=>{
         //   e.scrollIntoView(true);
-            const y = e.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            const y = e.getBoundingClientRect().top + window.pageYOffset + 100;
             window.scrollTo({top: y, behavior: 'smooth'});
         })
         
