@@ -59,7 +59,7 @@ header {
 #main_text {
     position: absolute;
     display: inline-block;
-    top: var(--top-menu-height);
+    margin-top: var(--top-menu-height);
     left: 300px;
     width: calc(100% - 300px - var(--side-margin));
     overflow-x: hidden;

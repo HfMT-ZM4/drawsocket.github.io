@@ -19,9 +19,9 @@ window.addEventListener("load", ()=>{
         menuItem.innerHTML = e.id;
 
         menuItem.addEventListener("click", ()=>{
-        //   e.scrollIntoView(true);
-            const y = e.getBoundingClientRect().top + window.pageYOffset - 50;
-            window.scrollTo({top: y});
+           e.scrollIntoView(true);
+        //    const y = e.getBoundingClientRect().top + window.pageYOffset - 50;
+        //    window.scrollTo({top: y});
         })
         
         menu.appendChild(menuItem);
