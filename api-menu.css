@@ -1,0 +1,28 @@
+#menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    padding-inline-start: 0px;
+    margin-left: 25px;
+    width: 300px;
+}
+
+#menu li {
+    list-style: none;
+    margin-left: 0;
+}
+
+#menu li:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+#main_text {
+    position: absolute;
+    display: inline-block;
+    left: 300px;
+    width: calc(100% - 300px);
+    overflow-x: hidden;
+
+}

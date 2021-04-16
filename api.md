@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="./api-menu.css" />
+<ul id="menu"></ul>
+
+<div id="main_text" markdown="1" >
+
 # API
 
 A Max/node.js based server/client system for drawing to web-browsers. Created at the Univeristy for Music and Theater Hamburg, 2019.
@@ -51,12 +56,15 @@ Alternatively, to keep the folders a little neater, the `drawsocket` abstraction
 ```
 
 # Default HTML and CSS files
+{: class="menuitem"}
+
 
 By default the `drawsocket` server responds to all URL requests with the template HTML page, `drawsocket-page.html` which loads the required Javascript files, sets up the basic HTML objects, layers, and imports the `drawsocket-default.css` which sets up some default display properties.
 
 If desired, a different template HTML page may be used by sending the `drawsocket` object the `html_template` message followed by a relative path to the template HTML file to use.
 
 # Message Format
+{: class="menuitem"}
 
 All messages in the `drawsocket` API are formatted as an object, enclosed by curly braces `{ }`. Messages can be encoded as Odot nested sub-bundles, or nested JSON objects. In the examples below we will be using OSC (odot) formatting, however you may also use a Max Dictionary, which will be exactly the same, except that address names will not have the leading `/` character.
 
@@ -124,6 +132,8 @@ For example, in the above example, we we set the `id` to be the name "rectangula
 Each `key` type has a slightly different API based on the needs of the objects created in the browser.
 
 ## __svg__
+{: class="api_key"}
+
 The `svg` key specifies that the `val` objects will be used to create or modify SVG elements, which will be placed by default in the webpage's main SVG element.
 
 The object(s) set to the client via the `val` field predominantly consist of *attributes* that configure the created object, as specified by the SVG specification, available online in many places. See the [Mozilla SVG documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) for information about the basic SVG object types.
@@ -158,6 +168,7 @@ HTML objects may be used inside SVG using a [foreignObject](https://developer.mo
 ```
 
 ### `style`
+
 A sub-bundle labeled `style` may optionally be included which will set inline CSS style properties for the created node, which will be applied by the browser, depending on the SVG specification, and the browser's implementation.
 
 For example:
@@ -288,6 +299,7 @@ An additional utility provided by `drawsocket` provides an offset to the importe
 
 
 ## __clear__ and __remove__
+{: class="api_key"}
 
 The `clear` and `remove` keys have similar, but slightly different behaviours.
 
@@ -325,6 +337,8 @@ Note that removing a `g` object, will remove all of its children *and* the `g` o
 
 
 ## __css__
+{: class="api_key"}
+
 The `css` key allows the user to to add new CSS rules to the webpage's `<style>` tag. See the [online documentation](https://developer.mozilla.org/en-US/docs/Web/CSS) for more information.
 
 There are two keywords used by the `drawsocket` API: `selector`, and `props`.
@@ -360,6 +374,7 @@ For example, here we create two rules, one for `line` objects, and one specifica
 ```
 
 ## __html__
+{: class="api_key"}
 
 The `html` key uses the same keywords as the `svg` key type:
 
@@ -399,6 +414,8 @@ By default HTML objects will be added to an HTML `div` object, one layer below t
 Additionaly, HTML layers may be created with a new `div` tag, just as discussed above via the `g` SVG tag.
 
 ## __tween__
+{: class="api_key"}
+
 `drawsocket` provides access to the GreenSock Animation Platform [TweenMax](https://greensock.com/docs/TweenMax) and [TimelineMax](https://greensock.com/docs/TimelineMax) libraries via the `tween` key. The object types are identified by the keywords used.
 
 [TweenMax](https://greensock.com/docs/TweenMax) objects use the keywords:
@@ -460,6 +477,8 @@ See the [TweenMax vars documentation](https://greensock.com/docs/TweenMax/vars),
 
 
 ## __pdf__
+{: class="api_key"}
+
 PDF files may be imported into `drawsocket` by reference, the settable attributes are as follows:
 
 * `href`: the path location of the .pdf file, relative to the Max patch.
@@ -481,6 +500,8 @@ PDF files may be imported into `drawsocket` by reference, the settable attribute
 ```
 
 ## __sound__
+{: class="api_key"}
+
 `drawsocket` includes the [tone.js](https://tonejs.github.io) library, note: __currently in beta__.
 
 Keywords:
@@ -548,6 +569,7 @@ Play a chord on a PolySynth via the `triggerAttackRelease` function:
 ```
 
 ### __set__
+
 To set the value of a Tone.js Signal object, for example the frequency of an Oscillator, we need to use a the `set` operator, which functions a bit like the `call` operator, but sets a member value rather than calling a function.
 
 The `set` keyword should contain an object or array of objects, with member keywords:
@@ -600,6 +622,8 @@ For example, the Tone.js PolySynth needs a member of the Tone libarary to set as
 
 
 ## `drawsocket` JS Methods
+{: class="api_key"}
+
 The drawsocket object itself maybe referred to in JS scripts, for example in an object event watcher. The `drawsocket` object, exposes the following methods for general usage:
 * `drawsocket.input`: the main entry point to the client script
 * `drawsocket.send`: the WebSocket interface to send a JS object back to the server.
@@ -633,6 +657,8 @@ For example, the following message creates a new HTML input field, where users c
 * `drawsocket.setConnectionCallback(cb_fn)` : sets callback function for notificaiton of socket connection.
 
 ## __file__
+{: class="api_key"}
+
 Clients can load JSON of stored messages, formatted in the `drawsocket` API detailed here.
 
 Keywords:
@@ -653,6 +679,8 @@ For example, here we tell clients logged into the URL `/foo` to load the message
 ```
 
 # __event__
+{: class="api_key"}
+
 The `event` keyword provides a mechanism for scheduling future object sent to the `drawsocket.input` function.
 
 * `id`: the id of the event
@@ -684,6 +712,8 @@ For example, the following example, an event is created and set with a delay (`d
 ```
 
 # __do_sync__
+{: class="api_key"}
+
 The `do_sync` keyword triggers the client clock time sychronization routine.
 
 ```
@@ -694,6 +724,8 @@ The `do_sync` keyword triggers the client clock time sychronization routine.
 ```
 
 # __writeSVG__
+{: class="api_key"}
+
 The `writeSVG` keyword requests the SVG element from a client browser. The result is saved to disk in the local folder of the patch containing the `drawsocket` object.
 
 For example:
@@ -760,7 +792,8 @@ The `drawsocket` object accepts the `html_root` Max message to add a public asse
 
 
 
-# __signalPeer__
+## __signalPeer__
+{: class="api_key"}
 
 Clients can send messages to other URLs on the server by using the `signalPeer` key sent to the server.
 
@@ -804,7 +837,8 @@ For example, here is a button that sends a message to another client on being cl
 }
 ```
 
-# undocumented, in dev keys:
+## __undocumented, in dev keys:__
+{: class="api_key"}
 
 * `function`: create and call user defined funcitons from JSON format.
   * `body`, `args`
@@ -896,3 +930,7 @@ For example, here is a button that sends a message to another client on being cl
   		/fill : "red"
   }
   ```
+
+</div>
+
+<script src="./api-menu.js"></script>
