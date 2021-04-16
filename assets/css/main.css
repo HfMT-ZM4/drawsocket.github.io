@@ -20,9 +20,13 @@ header {
 }
 
 .menu_wrapper {
-    float: right;
+    left: 300px;
+    position: absolute;
     display: flex;
-    flex-direction: row
+}
+
+.menu_item {
+    margin: 10px;
 }
 
 #api_menu {
