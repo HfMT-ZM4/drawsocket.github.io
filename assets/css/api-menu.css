@@ -27,6 +27,6 @@
 
 }
 
-.language-plaintext {
-    background-color: lightslategray;
+.language-plaintext div {
+    background-color: lightgrey;
 }
