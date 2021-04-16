@@ -37,6 +37,15 @@ header {
     margin-right: 25px;
 }
 
+a {
+    color: black;
+    text-decoration: dotted;
+}
+
+a:hover {
+    color: pink;
+}
+
 #api_menu {
     position: fixed;
     top: var(--top-menu-height);
