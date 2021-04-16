@@ -1,5 +1,5 @@
 
-#menu {
+#api_menu {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -9,12 +9,12 @@
     width: 300px;
 }
 
-#menu li {
+#api_menu li {
     list-style: none;
     margin-left: 0;
 }
 
-#menu li:hover {
+#api_menu li:hover {
     color: blue;
     cursor: pointer;
 }
