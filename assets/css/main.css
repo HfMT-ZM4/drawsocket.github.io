@@ -40,7 +40,7 @@ header {
 a {
     color: black;
     text-decoration: none;
-    border-bottom: 1px dotted;	
+    border-bottom: 1px dotted pink;	
 }
 
 a:hover {
