@@ -57,7 +57,6 @@ Alternatively, to keep the folders a little neater, the `drawsocket` abstraction
 ```
 
 # Default HTML and CSS files
-{: class="menuitem"}
 
 
 By default the `drawsocket` server responds to all URL requests with the template HTML page, `drawsocket-page.html` which loads the required Javascript files, sets up the basic HTML objects, layers, and imports the `drawsocket-default.css` which sets up some default display properties.
@@ -65,7 +64,6 @@ By default the `drawsocket` server responds to all URL requests with the templat
 If desired, a different template HTML page may be used by sending the `drawsocket` object the `html_template` message followed by a relative path to the template HTML file to use.
 
 # Message Format
-{: class="menuitem"}
 
 All messages in the `drawsocket` API are formatted as an object, enclosed by curly braces `{ }`. Messages can be encoded as Odot nested sub-bundles, or nested JSON objects. In the examples below we will be using OSC (odot) formatting, however you may also use a Max Dictionary, which will be exactly the same, except that address names will not have the leading `/` character.
 

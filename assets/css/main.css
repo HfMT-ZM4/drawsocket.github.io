@@ -68,8 +68,8 @@ header {
 .api_key::before { 
     display: block; 
     content: " "; 
-    margin-top: -285px; 
-    height: 285px; 
+    margin-top: calc(-1 * var(--top-menu-height)); 
+    height: var(--top-menu-height); 
     visibility: hidden; 
     pointer-events: none;
 }
