@@ -3,4 +3,9 @@ html {
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
+    --top-menu-height: 100px;
+}
+
+header {
+    height: var(--top-menu-height);
 }
