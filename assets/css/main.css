@@ -7,9 +7,21 @@ html {
 }
 
 header {
+    position: fixed;
     height: var(--top-menu-height);
+    border-bottom: 1px solid black;
 }
 
+#drawsocket {
+    float: left;
+    font-size: larger;
+}
+
+.menu_wrapper {
+    float: right;
+    display: flex;
+    flex-direction: row
+}
 
 #api_menu {
     position: fixed;
