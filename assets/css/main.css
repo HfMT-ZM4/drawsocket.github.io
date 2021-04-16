@@ -15,6 +15,9 @@ header {
     background: var(--bg-color);
     top: 0px;
     z-index: 10;
+    
+    display: flex;
+    align-items: center;
 }
 
 #drawsocket {
