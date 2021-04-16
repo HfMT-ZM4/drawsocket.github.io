@@ -4,6 +4,7 @@ html {
     line-height: 1.5;
     word-wrap: break-word;
     --top-menu-height: 50px;
+    --bg-color: white;
 }
 
 header {
@@ -11,7 +12,9 @@ header {
     height: var(--top-menu-height);
     width: 100%;
     border-bottom: 1px solid black;
-
+    background: var(--bg-color);
+    top: 0px;
+    z-index: 10;
 }
 
 #drawsocket {
