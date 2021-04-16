@@ -4,6 +4,7 @@ html {
     line-height: 1.5;
     word-wrap: break-word;
     --top-menu-height: 50px;
+    --side-margin: 25px;
     --bg-color: white;
 }
 
@@ -15,7 +16,7 @@ header {
     background: var(--bg-color);
     top: 0px;
     z-index: 10;
-    
+
     display: flex;
     align-items: center;
 }
@@ -41,7 +42,7 @@ header {
     left: 0px;
     display: inline-block;
     padding-inline-start: 0px;
-    margin-left: 25px;
+    margin-left: var(--side-margin);
     width: 300px;
 }
 
@@ -60,7 +61,7 @@ header {
     display: inline-block;
     top: var(--top-menu-height);
     left: 300px;
-    width: calc(100% - 300px);
+    width: calc(100% - 300px - var(--side-margin));
     overflow-x: hidden;
 
 }
