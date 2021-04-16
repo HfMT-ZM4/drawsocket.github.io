@@ -22,8 +22,9 @@ header {
 }
 
 #drawsocket {
-    float: left;
+    left: 15px;
     font-size: larger;
+    position: absolute;
 }
 
 .menu_wrapper {
