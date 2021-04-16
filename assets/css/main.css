@@ -11,7 +11,7 @@ header {
     position: fixed;
     height: var(--top-menu-height);
     width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid pink;
     background: var(--bg-color);
     top: 0px;
     z-index: 10;
