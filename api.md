@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="./api-menu.css" />
-<ul id="menu"></ul>
+---
+layout: api
+title: API
+---
 
-<div id="main_text" markdown="1" >
 
 # API
 
