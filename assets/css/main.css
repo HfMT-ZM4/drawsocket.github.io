@@ -70,6 +70,10 @@ a:hover {
     margin-left: 0;
 }
 
+#api_menu strong {
+    font-weight: normal;
+}
+
 #api_menu li:hover {
     color: var(--fg-color);
     cursor: pointer;
