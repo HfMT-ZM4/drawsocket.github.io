@@ -22,7 +22,7 @@ window.addEventListener("load", ()=> {
         menuItem.addEventListener("click", ()=>{
             window.location.hash = e.id;
 
-            menu.querySelectorAll(".selected").forEach( s => {
+            document.querySelectorAll(".selected").forEach( s => {
                 s.classList.remove("selected");
             })
 

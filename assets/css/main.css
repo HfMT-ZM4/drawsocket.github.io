@@ -70,7 +70,7 @@ a:hover {
     margin-left: 0;
 }
 
-#api_menu.selected {
+#api_menu .selected {
     color: var(--fg-color);
     border-bottom: 1px dotted var(--fg-color);
 }
