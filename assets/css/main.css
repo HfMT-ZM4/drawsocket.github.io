@@ -6,13 +6,14 @@ html {
     --top-menu-height: 50px;
     --side-margin: 25px;
     --bg-color: white;
+    --fg-color: pink;
 }
 
 header {
     position: fixed;
     height: var(--top-menu-height);
     width: 100%;
-    border-bottom: 1px dashed pink;
+    border-bottom: 1px dashed var(--fg-color);
     background: var(--bg-color);
     top: 0px;
     z-index: 10;
@@ -37,14 +38,18 @@ header {
     margin-right: 25px;
 }
 
+.menu_item:hover {
+    color: var(--fg-color);
+}
+
 a {
     color: black;
     text-decoration: none;
-    border-bottom: 1px dotted pink;	
+    border-bottom: 1px dotted var(--fg-color);	
 }
 
 a:hover {
-    color: pink;
+    color: var(--fg-color);
 }
 
 #api_menu {
@@ -56,7 +61,7 @@ a:hover {
     margin-left: var(--side-margin);
     width: 225px;
     height: 100%;
-    border-right: 1px dashed pink;
+    border-right: 1px dashed var(--fg-color);
 }
 
 #api_menu li {
@@ -65,7 +70,7 @@ a:hover {
 }
 
 #api_menu li:hover {
-    color: pink;
+    color: var(--fg-color);
     cursor: pointer;
 }
 
