@@ -73,6 +73,7 @@ a:hover {
 #api_menu .selected {
     color: var(--fg-color);
     border-bottom: 1px dotted var(--fg-color);
+    margin-bottom: -1px;
 }
 
 #api_menu strong {
