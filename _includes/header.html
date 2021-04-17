@@ -10,7 +10,9 @@
 <script>
     document.addEventListener("load", ()=>{
         document.querySelectorAll(".menu_item").forEach( e =>{
-            location.href = e.innerHTML.toLowerCase()+".html";
+            e.addEventListener("click", ()=>{
+                window.location.href = e.innerHTML.toLowerCase()+".html";
+            })
         });
     })
 </script>
