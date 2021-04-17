@@ -45,20 +45,20 @@ window.addEventListener("load", ()=> {
     document.addEventListener("scroll", (event) => {
 
         let scrollPos = window.scrollY;
-        let selectItem;
+        let idx = 0;
         for( let i = 0; i < keyArr.length; i++) {
             if( keyArr[i].y > scrollPos )
             {
-                selectItem = keyArr[i].el;
+                idx = i;
                 break;
             }
         }
-        console.log(selectItem, scrollPos);
+        console.log(keyArr[idx], scrollPos);
         document.querySelectorAll(".selected").forEach( s => {
             s.classList.remove("selected");
         })
         
-        selectItem.classList.add("selected");
+        keyArr[idx].el.classList.add("selected");
 
     });
     
