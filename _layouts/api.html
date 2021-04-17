@@ -44,10 +44,10 @@ window.addEventListener("load", ()=> {
 
     document.addEventListener("scroll", (event) => {
 
-        let scrollPos = window.scrollY;
+        let scrollPos = window.scrollY + 50;
         let idx = 0;
-        for( let i = 0; i < keyArr.length; i++) {
-            if( keyArr[i].y > scrollPos )
+        for( let i = 0; i < keyArr.length-1; i++) {
+            if( keyArr[i+1].y > scrollPos )
             {
                 idx = i;
                 break;
