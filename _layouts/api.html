@@ -13,12 +13,19 @@ layout: default
 window.addEventListener("load", ()=> {
 
     let menu = document.getElementById("api_menu");
+
+    let keyArr = [];
     document.querySelectorAll('.api_key').forEach( e => {
         
         let menuItem = document.createElement("li");
         menuItem.classList.add("api_menu_item");
         menuItem.innerHTML = e.innerHTML;
 
+        keyArr.push({
+            id: e.id,
+            y: e.getBoundingClientRect().y
+        })
+        
         menuItem.addEventListener("click", ()=>{
             window.location.hash = e.id;
 
@@ -33,36 +40,31 @@ window.addEventListener("load", ()=> {
         menu.appendChild(menuItem);
     })
 
+    keyArr.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
+
     let main_text = document.getElementById("main_text");
 
+
     document.addEventListener("scroll", (event) => {
+
         let scrollPos = window.scrollY;
-        console.log(scrollPos, event);
-        document.querySelectorAll('.api_key').forEach( e => {
+        let selectItem;
+        for( let i = 0; i < keyArr.length; i++) {
+            if( keyArr[i].y > scrollPos )
+            {
+                selectItem = document.getElementById(keyArr[i].id);
+                break;
+            }
+        }
 
-        });
+        document.querySelectorAll(".selected").forEach( s => {
+            s.classList.remove("selected");
+        })
+        
+        selectItem.classList.add("selected");
+
     });
-    /*
-
-$(document).ready(function() {
-    $(document).on("scroll", onScroll);
-
-  function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
-        });
-    }
-})
-*/
+    
 
 })
 </script>
