@@ -7,3 +7,10 @@
         <div class="menu_item">download</div>
     </div>
 </header>
+<script>
+    document.addEventListener("load", ()=>{
+        document.querySelectorAll(".menu_item").forEach( e =>{
+            location.href = e.innerHTML.toLowerCase()+".html";
+        });
+    })
+</script>
