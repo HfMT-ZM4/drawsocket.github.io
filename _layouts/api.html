@@ -33,8 +33,10 @@ window.addEventListener("load", ()=> {
         menu.appendChild(menuItem);
     })
 
-    document.addEventListener("scroll", (event) => {
-        let scrollPos = document.scrollTop;
+    let main_text = document.getElementById("main_text");
+
+    main_text.addEventListener("scroll", (event) => {
+        let scrollPos = main_text.scrollTop;
         console.log(scrollPos);
         document.querySelectorAll('.api_key').forEach( e => {
 
