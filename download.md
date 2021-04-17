@@ -1,11 +1,13 @@
 ---
-layout: default
-title: download
+layout: page
+title: Download
 ---
 
 # Download
 
 [download](https://github.com/HfMT-ZM4/drawsocket)
+
+## Installation
 
 Requires Max version >= 8.1.0, and is designed for use with [CNMAT's Odot library](https://github.com/CNMAT/CNMAT-odot/releases) and [MaxScore](http://www.computermusicnotation.com/?page_id=22).
 
