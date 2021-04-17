@@ -7,12 +7,18 @@
         <div class="menu_item">download</div>
     </div>
 </header>
+
 <script>
     document.addEventListener("load", ()=>{
+
         document.querySelectorAll(".menu_item").forEach( e =>{
+            console.log("setting event for ", e);
+
             e.addEventListener("click", ()=>{
+                console.log("hi");
                 window.location.href = e.innerHTML.toLowerCase()+".html";
             })
+        
         });
     })
 </script>
