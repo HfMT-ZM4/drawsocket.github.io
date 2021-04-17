@@ -1,6 +1,9 @@
 ---
+layout: default
 title: download
 ---
+
+# Download
 
 [download](https://github.com/HfMT-ZM4/drawsocket)
 
