@@ -16,7 +16,7 @@ window.addEventListener("load", ()=>{
         
         let menuItem = document.createElement("li");
         menuItem.classList.add("api_menu_item");
-        menuItem.innerHTML = e.inner;
+        menuItem.innerHTML = e.innerHTML;
 
         menuItem.addEventListener("click", ()=>{
             window.location.hash = e.id;
