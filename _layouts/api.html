@@ -48,7 +48,7 @@ window.addEventListener("load", ()=> {
      //   let scrollPos = window.scrollY + 50;
         let idx = 0;
         for( let i = 0; i < keyArr.length-1; i++) {
-            if( keyArr[i].y > 0 )
+            if( keyArr[i+1].y > 0 )
             {
                 idx = i;
                 break;
