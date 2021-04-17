@@ -23,7 +23,7 @@ window.addEventListener("load", ()=> {
 
         keyArr.push({
             el: menuItem,
-            y: e.getBoundingClientRect().y
+            y: e.getBoundingClientRect().y + window.scrollY
         })
         
         menuItem.addEventListener("click", ()=>{
