@@ -497,42 +497,6 @@ For example, the Tone.js PolySynth needs a member of the Tone libarary to set as
 }
 ```
 
-
-## `drawsocket` JS Methods
-{: class="api_key"}
-
-The drawsocket object itself maybe referred to in JS scripts, for example in an object event watcher. The `drawsocket` object, exposes the following methods for general usage:
-* `drawsocket.input`: the main entry point to the client script
-* `drawsocket.send`: the WebSocket interface to send a JS object back to the server.
-* `drawsocket.url` (alias `drawsocket.oscprefix`): the URL/OSC-prefix of the client, useful for self identifying when sending messages back to the server.
-* `drawsocket.syncOffset()` : function which returns timesync offset.
-
-For example, the following message creates a new HTML input field, where users can type. When the user hits the Enter key, the script will send the value of the HTML form to the server prefixed by the client's OSC-prefix, and the `id` of this object:
-
-```
-/* : {
-  /key : "html",
-  /val : {
-    /parent : "forms",
-    /new : "input",
-    /type : "text",
-    /id : "userinput",
-    /name : "userinput",
-    /size : 10,
-    /onkeydown : "if( event.key == 'Enter' ){
-      let obj = {};
-      obj[ drawsocket.oscprefix+'/'+this.id+'/input' ] = this.value;
-      drawsocket.send( obj );
-    }"
-  }
-}
-
-```
-
-### callback function setters for use in custom HTML contexts
-* `drawsocket.setInputListener(cb_fn)`  : sets additional callback handlers for `key` values.
-* `drawsocket.setConnectionCallback(cb_fn)` : sets callback function for notificaiton of socket connection.
-
 ## __file__
 {: class="api_key"}
 
@@ -615,58 +579,40 @@ For example:
 will output the file: `path/to/patch/downloaded-URLtoWrite.svg`.
 
 
-# Storing the Sever State
-The `drawsocket` object in Max accepts the `writecache` message,to write the current cached messages to a file on disk.
+## JS Methods
+{: class="api_key"}
 
-The folder path is relative to the folder path of the patch in which the `drawsocket` object is in.
+The drawsocket object itself maybe referred to in JS scripts, for example in an object event watcher. The `drawsocket` object, exposes the following methods for general usage:
+* `drawsocket.input`: the main entry point to the client script
+* `drawsocket.send`: the WebSocket interface to send a JS object back to the server.
+* `drawsocket.url` (alias `drawsocket.oscprefix`): the URL/OSC-prefix of the client, useful for self identifying when sending messages back to the server.
+* `drawsocket.syncOffset()` : function which returns timesync offset.
 
-Message syntax:
+For example, the following message creates a new HTML input field, where users can type. When the user hits the Enter key, the script will send the value of the HTML form to the server prefixed by the client's OSC-prefix, and the `id` of this object:
 
-`writecache <relative folder path>/<filename>.json`
+```
+/* : {
+  /key : "html",
+  /val : {
+    /parent : "forms",
+    /new : "input",
+    /type : "text",
+    /id : "userinput",
+    /name : "userinput",
+    /size : 10,
+    /onkeydown : "if( event.key == 'Enter' ){
+      let obj = {};
+      obj[ drawsocket.oscprefix+'/'+this.id+'/input' ] = this.value;
+      drawsocket.send( obj );
+    }"
+  }
+}
 
-or, to write only one URL prefix:
+```
 
-`writecache <relative folder path>/<filename>.json /myURLPrefix`
-
-
-# Importing Server Cache from File
-The `drawsocket` object in Max accepts the `importcache` message, to read a file from disk and import one or all `prefix` objects in the file.
-
-The folder path is relative to the folder path of the patch in which the `drawsocket` object is in.
-
-Message syntax:
-
-`importcache <relative folder path>/<filename>.json`
-
-or, to read only one URL prefix:
-
-`importcache <relative folder path>/<filename>.json /myURLPrefix`
-
-
-## Using stored JSON files on other servers
-A stored server/client state, saved in JSON format, may also be for online viewing, without the realtime WebSocket system, by serving the `drawsocket-default.html` file (with the associated scripts, and CSS files), and specifying a file name and prefix to load as discussed above via the `file` key.
-
-For example, on a website called `www.foo.com` and a stored JSON file named `stored-cache.json`, we could load the `/1` OSC-URL prefix by using the following URL arguments (using the standard `?`,`&`, `=` special characters):
-
-`http://www.foo.com/drawsocket-default.html?fetch=stored-cache.json&prefix=/1`
-
-(Of course you could also save the HTML file under a differnt name of your choosing for your server)
-
-# ping
-The `drawsocket` object accepts the `ping` Max message to query the connection status of one or more clients.
-For example, the message `ping /*` pings all clients.
-
-# statereq
-The `drawsocket` object accepts the `statereq` Max message to trigger a client update request for one or more clients.
-
-For example, the message `statereq /*` triggers a state request for all clients.
-
-# port
-The `drawsocket` object accepts the `port` Max message to set the server port number. Takes effect on start up.
-
-# html_root
-The `drawsocket` object accepts the `html_root` Max message to add a public asset folder to the server search path. Takes effect on start up.
-
+### callback function setters for use in custom HTML contexts
+* `drawsocket.setInputListener(cb_fn)`  : sets additional callback handlers for `key` values.
+* `drawsocket.setConnectionCallback(cb_fn)` : sets callback function for notificaiton of socket connection.
 
 
 ## __signalPeer__
@@ -714,7 +660,7 @@ For example, here is a button that sends a message to another client on being cl
 }
 ```
 
-## __undocumented, in dev keys:__
+## __in dev keys:__
 {: class="api_key"}
 
 * `function`: create and call user defined funcitons from JSON format.

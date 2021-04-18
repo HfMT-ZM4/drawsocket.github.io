@@ -104,3 +104,72 @@ For example, in the above example, we we set the `id` to be the name "rectangula
     }
 }
 ```
+
+
+# Messages to Drawsocket
+{: class="api_key"}
+
+
+## Storing the Sever State
+{: class="api_key"}
+
+The `drawsocket` object in Max accepts the `writecache` message,to write the current cached messages to a file on disk.
+
+The folder path is relative to the folder path of the patch in which the `drawsocket` object is in.
+
+Message syntax:
+
+`writecache <relative folder path>/<filename>.json`
+
+or, to write only one URL prefix:
+
+`writecache <relative folder path>/<filename>.json /myURLPrefix`
+
+
+## Importing Server Cache from File
+The `drawsocket` object in Max accepts the `importcache` message, to read a file from disk and import one or all `prefix` objects in the file.
+
+The folder path is relative to the folder path of the patch in which the `drawsocket` object is in.
+
+Message syntax:
+
+`importcache <relative folder path>/<filename>.json`
+
+or, to read only one URL prefix:
+
+`importcache <relative folder path>/<filename>.json /myURLPrefix`
+
+
+## Using stored JSON files on other servers
+A stored server/client state, saved in JSON format, may also be for online viewing, without the realtime WebSocket system, by serving the `drawsocket-default.html` file (with the associated scripts, and CSS files), and specifying a file name and prefix to load as discussed above via the `file` key.
+
+For example, on a website called `www.foo.com` and a stored JSON file named `stored-cache.json`, we could load the `/1` OSC-URL prefix by using the following URL arguments (using the standard `?`,`&`, `=` special characters):
+
+`http://www.foo.com/drawsocket-default.html?fetch=stored-cache.json&prefix=/1`
+
+(Of course you could also save the HTML file under a differnt name of your choosing for your server)
+
+# ping
+{: class="api_key"}
+
+The `drawsocket` object accepts the `ping` Max message to query the connection status of one or more clients.
+For example, the message `ping /*` pings all clients.
+
+# statereq
+{: class="api_key"}
+
+The `drawsocket` object accepts the `statereq` Max message to trigger a client update request for one or more clients.
+
+For example, the message `statereq /*` triggers a state request for all clients.
+
+# port
+{: class="api_key"}
+
+The `drawsocket` object accepts the `port` Max message to set the server port number. Takes effect on start up.
+
+# html_root
+{: class="api_key"}
+
+The `drawsocket` object accepts the `html_root` Max message to add a public asset folder to the server search path. Takes effect on start up.
+
+
