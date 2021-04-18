@@ -660,22 +660,24 @@ For example, here is a button that sends a message to another client on being cl
 }
 ```
 
-## __in dev keys:__
+## __in dev keys__
 {: class="api_key"}
 
 * `function`: create and call user defined funcitons from JSON format.
   * `body`, `args`
+
 ```
 {
   /key : "funciton",
   /val : {
     /args : ["a", "b"],
-    /body : " console.log( a + b ); "
+    /body : "console.log( a + b );"
   }
 }
 ```
 
 * in some object type parsers, the parameters passed an object including the address `/funciton` can be used to create an anonymous function:
+  
   ```
   /id : "foo",
   /onload : {
