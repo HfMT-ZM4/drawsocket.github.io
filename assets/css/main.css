@@ -149,6 +149,10 @@ code {
     background-color: #f6f8fa;
 }
 
+.language-plaintext {
+    background-color: #ffc0cb38;
+}
+
 .highlight pre, .markdown-body pre {
     padding: 16px;
     overflow: auto;
