@@ -36,6 +36,15 @@ header {
     height: 80px;
 }
 
+#connectionLine {
+    position: fixed;
+    width: 200px;
+    left: 25px;
+    top: 100px;
+    border-bottom: 1px dashed var(--fg-color);
+
+}
+
 #drawsocket {
     right: 10%;
     font-size: larger;
