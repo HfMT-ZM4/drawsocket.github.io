@@ -1,7 +1,13 @@
 html {
-    font-family: Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-family: arial, sans-serif; /*Lato, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;*/
+    /*font-size: 18px;*/
+    font-size: 100%;
+    line-height: 1.75;
+
+    letter-spacing: -.0027777778rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
     word-wrap: break-word;
     --top-menu-height: 50px;
     --side-margin: 25px;
