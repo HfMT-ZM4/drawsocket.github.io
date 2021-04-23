@@ -23,8 +23,13 @@ header {
 }
 
 .logo {
-    left: 15px;
+    left: 20px;
+    height: 80px;
     position: absolute;
+    
+    z-index: 100;
+    background: white;
+    top: 10px;
 }
 
 #drawsocket {
