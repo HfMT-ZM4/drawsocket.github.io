@@ -126,7 +126,7 @@ a:hover {
     display: inline-block;
     top: var(--top-menu-height);
     left: 250px;
-    width: calc(100% - 300px - var(--side-margin));
+    width: calc(100% - 400px - var(--side-margin));
     border-left: 1px dashed pink;
     overflow-x: hidden;
     padding-left: 50px;
@@ -156,7 +156,7 @@ code {
 .highlight pre, .markdown-body pre {
     padding: 16px;
     overflow: auto;
-    font-size: 85%;
+    /*font-size: 85%;*/
     line-height: 1.45;
     background-color: #f6f8fa;
     border-radius: 6px;
