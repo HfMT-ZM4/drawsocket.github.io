@@ -23,6 +23,7 @@ header {
 }
 
 .logo {
+    display: fixed;
     left: 20px;
     height: 80px;
     width: 200px;
