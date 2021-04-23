@@ -75,7 +75,8 @@ a:hover {
 
 #api_menu {
     position: fixed;
-    top: 100px;
+    top: var(--top-menu-height);
+    padding-top: 100px;
     left: 0px;
     display: inline-block;
     padding-inline-start: 0px;
