@@ -33,9 +33,15 @@ header {
 }
 
 #drawsocket {
-    right: 15px;
+    right: 10%;
     font-size: larger;
     position: absolute;
+    background: black;
+    color: white;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
 }
 
 .menu_wrapper {
