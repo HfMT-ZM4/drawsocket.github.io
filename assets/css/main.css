@@ -25,11 +25,15 @@ header {
 .logo {
     left: 20px;
     height: 80px;
+    width: 200px;
     position: absolute;
-    
     z-index: 100;
     background: white;
     top: 10px;
+}
+
+.logo img {
+    height: 80px;
 }
 
 #drawsocket {
