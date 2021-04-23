@@ -38,10 +38,10 @@ header {
 
 #connectionLine {
     position: fixed;
-    width: 200px;
+    width: 225px;
     left: 25px;
     top: 100px;
-    border-bottom: 1px dashed var(--fg-color);
+    border-bottom: 1px dotted var(--fg-color);
 
 }
 
