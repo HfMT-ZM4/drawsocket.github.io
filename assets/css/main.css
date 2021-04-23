@@ -92,7 +92,7 @@ a:hover {
     margin-left: var(--side-margin);
     width: 225px;
     height: 100%;
-    border-right: 1px dashed var(--fg-color);
+ /*   border-right: 1px dashed var(--fg-color); */
 }
 
 #api_menu li {
@@ -119,9 +119,12 @@ a:hover {
     position: absolute;
     display: inline-block;
     top: var(--top-menu-height);
-    left: 300px;
+    left: 250px;
     width: calc(100% - 300px - var(--side-margin));
+    border-left: 1px dashed pink;
     overflow-x: hidden;
+    padding-left: 50px;
+
 }
 
 .api_key::before { 
