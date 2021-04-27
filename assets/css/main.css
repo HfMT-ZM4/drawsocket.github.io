@@ -188,7 +188,7 @@ a:hover {
     width: calc(100% - 400px - var(--side-margin));
 /*    height: calc(100% - 50px - var(--top-menu-height));; 
     border-left: 1px dashed pink;*/
-    overflow-x: hidden;
+    overflow-x: visible;
     padding-left: 50px;
     padding-bottom: var(--footer-height);
 
@@ -243,4 +243,9 @@ code {
 .inline_code {
     position: relative;
     display: inline-block;
+}
+
+.no_wrap {
+    white-space: nowrap;
+    overflow: visible;
 }

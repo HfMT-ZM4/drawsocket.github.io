@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Index
+title: index
 ---
 
-
+<div markdown="1" class="no_wrap">
 ```
 {
     "key" : "svg",
@@ -45,6 +45,7 @@ title: Index
 }
 ```
 {: class="inline_code"}
+</div>
 
 {% include drawsocket-web.html %}
 
