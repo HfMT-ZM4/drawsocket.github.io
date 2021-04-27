@@ -17,7 +17,7 @@ title: Index
         "cx" : 100,
         "cy" : 100,
         "r" : 40,
-        "fill" : blue
+        "fill" : "blue"
     }
 }
 ```
