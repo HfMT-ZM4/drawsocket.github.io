@@ -4,7 +4,7 @@ title: Index
 ---
 
 <style>
-    .highlight pre:hover {
+    .highlight pre:hover, code {
         background-color: pink;
     }
 </style>
