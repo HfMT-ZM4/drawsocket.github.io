@@ -16,13 +16,13 @@ drawsocket.input({
         fill: blue
     }
 })
-```{: class="drawsocket_code" }
+```
 
 
 {% include drawsocket-web.html %}
 
 
 <script>
-    const snippet = document.querySelector(".drasocket_code");
+    const snippet = document.querySelector("code");
     console.log(snippet.innerHTML);
 </script>
