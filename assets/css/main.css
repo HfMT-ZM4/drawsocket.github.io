@@ -43,6 +43,20 @@ header {
     height: 80px;
 }
 
+.logo:hover {
+  
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left: -10px;
+
+    margin-top: -10px;
+    margin-bottom: -10px;
+    filter: invert(100%) !important;
+    -webkit-filter: invert(100%) !important;
+
+}
+
 #connectionLine {
     position: fixed;
     width: 225px;
