@@ -3184,7 +3184,7 @@ var drawsocket = (function(){
 
   window.onbeforeunload = function() {
     // port.onclose = function () {}; // disable onclose handler first
-    if( port.readyState === port.OPEN  )
+    if( port && port.readyState === port.OPEN  )
     {
       port.close();
     }
