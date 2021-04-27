@@ -3052,6 +3052,7 @@ var drawsocket = (function(){
       return;
     }
 
+    /*
     if( typeof port === "undefined" )
         port = new _SocketPort_();
 
@@ -3136,7 +3137,8 @@ var drawsocket = (function(){
       });
 
     };
-
+  
+    */
 
     /*
     this.port.on('timesync', function (data) {
