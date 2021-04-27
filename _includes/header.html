@@ -31,10 +31,13 @@
             console.log("setting event for ", e);
 
             e.addEventListener("click", ()=>{
-                console.log("hi");
                 window.location.href = e.innerHTML.toLowerCase()+".html";
             })
         
+        });
+
+        document.querySelector("#imprint").addEventListener("click", ()=>{
+            window.location.href = "imprint.html";        
         });
 
         document.getElementById("drawsocket").addEventListener("click", ()=>{
@@ -43,6 +46,10 @@
 
         document.querySelector(".logo").addEventListener("click", ()=>{
             window.location.href = "index.html";
+        })
+
+        document.querySelector("#hfmt_logo").addEventListener("click", ()=>{
+            window.location.href = "https://www.hfmt-hamburg.de/innovative-hochschule/";
         })
 
     })

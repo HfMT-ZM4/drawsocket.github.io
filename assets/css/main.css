@@ -48,15 +48,17 @@ footer {
 }
 
 
-footer #hfmt_logo {
+#hfmt_logo {
     height: 100px;
     left: 250px;
     bottom: 0px;
     position: absolute;
     padding-left: 20px;
-
 }
 
+#hfmt_logo:hover {
+    cursor: pointer;
+}
 
 .logo {
     left: 20px;
@@ -248,4 +250,8 @@ code {
 .no_wrap {
     white-space: nowrap;
     overflow: visible;
+}
+
+.line_breaks {
+    white-space: pre-wrap;
 }
