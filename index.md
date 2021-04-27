@@ -3,20 +3,6 @@ layout: page
 title: Index
 ---
 
-<style>
-    .highlight pre:hover {
-        background-color: pink !important;
-    }
-
-    code {
-         background-color: inherit;
-    }
-
-    .drawsocket-web {
-        height: 400px;
-    }
-</style>
-
 ```
 {
     "key" : "svg",
@@ -31,8 +17,21 @@ title: Index
 }
 ```
 
-
 {% include drawsocket-web.html %}
+
+<style>
+    .highlight pre:hover {
+        background-color: pink !important;
+    }
+
+    code {
+         background-color: inherit;
+    }
+
+    .drawsocket-web {
+        height: 400px;
+    }
+</style>
 
 
 <script>
