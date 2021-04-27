@@ -11,13 +11,20 @@ title: Index
         "id" : "foo",
         "cx" : 100,
         "cy" : 100,
-        "r" : 40,
-        "fill" : "blue"
+        "r" : 20,
+        "fill" : "pink"
     }
 }
 ```
 
 {% include drawsocket-web.html %}
+
+```
+{
+    "key" : "clear",
+    "val" : "*"
+}
+```
 
 <style>
     .highlight pre:hover {
@@ -35,15 +42,15 @@ title: Index
 
 
 <script>
-    const snippet_code_block = document.querySelector(".highlight");
+
+    const snippet_code_block = document.querySelectorAll(".highlight");
    
-    const snippet_code = snippet_code_block.querySelector("code");
-
-    const snippet = JSON.parse(snippet_code.innerHTML);
-
-    snippet_code_block.addEventListener("click", ()=> {
-        console.log("clicked and sending:", snippet);
-        drawsocket.input(snippet);
-    });
+    snippet_code_block.forEach( b => {
+        const snippet_code = b.querySelector("code");
+        const snippet = JSON.parse(snippet_code.innerHTML);
+        b.addEventListener("click", ()=> {
+            drawsocket.input(snippet);
+        });
+    })
 
 </script>
