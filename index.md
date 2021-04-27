@@ -4,8 +4,12 @@ title: Index
 ---
 
 <style>
-    .highlight pre:hover, code:hover {
+    .highlight pre:hover {
         background-color: pink !important;
+    }
+
+    code {
+         background-color: inherit;
     }
 </style>
 
