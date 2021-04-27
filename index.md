@@ -27,6 +27,10 @@ title: Index
 
 
 <script>
-    const snippet = document.querySelector("code");
-    console.log(JSON.parse(snippet.innerHTML));
+    const snippet_code = document.querySelector("code");
+    
+    const snippet = JSON.parse(snippet_txt.innerHTML);
+
+    snippet_code.addEventListener("click", ()=> drawsocket.input(snippet) );
+
 </script>
