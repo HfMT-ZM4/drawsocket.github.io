@@ -2993,9 +2993,10 @@ var drawsocket = (function(){
     else if( typeof port.readyState === "undefined" || port.readyState !== port.OPEN )
     {
       console.log('handleVisibilityChange, typeof port.readyState === "undefined" || port.readyState !== port.OPEN');
-
+/*
       port.close();
       port = new _SocketPort_();
+*/
       hasstate = false;
     }
     else
