@@ -55,18 +55,20 @@ header {
     right: 10%;
     font-size: larger;
     position: absolute;
-    background: black;
-    color: white;
+}
 
+.white-on-black-text {
     padding-left: 15px;
     padding-right: 15px;
-
+    background: black;
+    color: white;
 }
 
-#drawsocket:hover {
+.white-on-black-text:hover {
     color: black;
-    background: white;
+    background: var(--fg-color);
 }
+
 
 .menu_wrapper {
     left: 300px;
