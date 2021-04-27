@@ -33,7 +33,7 @@ title: Index
 
     snippet_code.addEventListener("click", ()=> {
         console.log("clicked and sending:", snippet);
-        drawsocket.input(snippet) 
+        drawsocket.input(snippet);
     });
 
 </script>

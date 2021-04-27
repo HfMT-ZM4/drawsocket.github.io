@@ -2213,7 +2213,7 @@ var drawsocket = (function(){
       iter_obj_arr = obj;
     
 
-//  console.log(iter_obj_arr);
+  console.log(iter_obj_arr);
 
     let wasHandled = true;
 
