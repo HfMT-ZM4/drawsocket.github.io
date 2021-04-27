@@ -63,6 +63,11 @@ header {
 
 }
 
+#drawsocket:hover {
+    color: black;
+    background: white;
+}
+
 .menu_wrapper {
     left: 300px;
     position: absolute;
