@@ -3,6 +3,7 @@ layout: page
 title: Index
 ---
 
+
 ```
 {
     "key" : "svg",
@@ -12,10 +13,30 @@ title: Index
         "cx" : 100,
         "cy" : 100,
         "r" : 20,
-        "fill" : "pink"
+        "fill" : "#66ff66"
     }
 }
 ```
+{: class="inline_code"}
+
+```
+{
+    "key" : "tween",
+    "val" : {
+        "id" : "bar",
+        "target" : "#foo",
+        "dur" : 1,
+        "vars" : {
+            "x" : "+= 200",
+            "y" : "+= 200",
+            "repeat" : -1,
+            "yoyo" : "true",
+            "paused" : "false"
+        }
+    }
+}
+```
+{: class="inline_code"}
 
 ```
 {
@@ -23,6 +44,7 @@ title: Index
     "val" : "*"
 }
 ```
+{: class="inline_code"}
 
 {% include drawsocket-web.html %}
 

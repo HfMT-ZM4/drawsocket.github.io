@@ -68,7 +68,7 @@ header {
     color: black;
     background: white;
     border: 1px dotted var(--fg-color);
-    margin-left: -1px;
+    margin-left: 0px;
 }
 
 
@@ -185,3 +185,7 @@ code {
     width: fit-content;
 }*/
 
+.inline_code {
+    position: relative;
+    display: inline-block;
+}
