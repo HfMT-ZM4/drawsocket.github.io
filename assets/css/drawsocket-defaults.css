@@ -45,7 +45,7 @@
 }
 */
 
-#main-html div {
+.drawsocket-web div {
   position: absolute;
 }
 
@@ -93,18 +93,18 @@
   pointer-events: all;
   float: left;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
   z-index: 10;
 }
 
 #main-svg {
   float: left;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
   z-index: 10;
 }
 
