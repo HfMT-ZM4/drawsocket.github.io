@@ -17,14 +17,15 @@ title: Index
 }
 ```
 
-{% include drawsocket-web.html %}
-
 ```
 {
     "key" : "clear",
     "val" : "*"
 }
 ```
+
+{% include drawsocket-web.html %}
+
 
 <style>
     .highlight pre:hover {
