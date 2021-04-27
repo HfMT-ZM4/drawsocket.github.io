@@ -18,6 +18,7 @@ title: Index
     "key" : "svg",
     "val" : {
         "new" : "circle",
+        "id" : "foo",
         "cx" : 100,
         "cy" : 100,
         "r" : 40,
