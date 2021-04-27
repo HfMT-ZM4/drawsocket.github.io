@@ -6,16 +6,16 @@ title: Index
 
 
 ```
-drawsocket.input({
-    key: "svg",
-    val: {
-        new: "circle",
-        cx: 100,
-        cy: 100,
-        r: 40,
-        fill: blue
+{
+    "key" : "svg",
+    "val" : {
+        "new" : "circle",
+        "cx" : 100,
+        "cy" : 100,
+        "r" : 40,
+        "fill" : blue
     }
-})
+}
 ```
 
 
@@ -24,5 +24,5 @@ drawsocket.input({
 
 <script>
     const snippet = document.querySelector("code");
-    console.log(snippet.innerHTML);
+    console.log(JSON.parse(snippet.innerHTML));
 </script>
