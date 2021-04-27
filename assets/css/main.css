@@ -28,6 +28,35 @@ header {
     align-items: center;
 }
 
+footer {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    border-top: 1px dashed var(--fg-color);
+    background: var(--bg-color);
+    bottom: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+
+}
+
+#imprint {
+    right: 10%;
+    position: absolute;
+}
+
+
+footer #hfmt_logo {
+    height: 100px;
+    left: 250px;
+    bottom: 0px;
+    position: absolute;
+    padding-left: 20px;
+
+}
+
+
 .logo {
     left: 20px;
     height: 80px;
