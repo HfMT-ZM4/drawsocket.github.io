@@ -121,6 +121,10 @@ a:hover {
     cursor: pointer;
 }
 
+#hfmt_logo {
+    height: 100px;
+}
+
 #main_text {
     position: absolute;
     display: inline-block;
