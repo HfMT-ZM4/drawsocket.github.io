@@ -1752,7 +1752,7 @@ var drawsocket = (function(){
      audioStatus = true;
 
      clearSound();
-     port.sendObj({ statereq: 1 });
+    // port.sendObj({ statereq: 1 });
    }
   
 
