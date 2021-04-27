@@ -13,6 +13,7 @@ html {
     --side-margin: 25px;
     --bg-color: white;
     --fg-color: pink;
+    --footer-height: 100px;
 }
 
 header {
@@ -189,6 +190,7 @@ a:hover {
     border-left: 1px dashed pink;
     overflow-x: hidden;
     padding-left: 50px;
+    padding-bottom: var(--footer-height);
 
 }
 
