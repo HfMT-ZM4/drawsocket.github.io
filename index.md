@@ -53,6 +53,7 @@ title: index
 <style>
     .highlight pre:hover {
         background-color: pink !important;
+        cursor: pointer;
     }
 
     code {

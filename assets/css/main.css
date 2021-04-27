@@ -49,7 +49,7 @@ footer {
 
 
 #hfmt_logo {
-    height: 100px;
+    height: 101px;
     left: 250px;
     bottom: 0px;
     position: absolute;
@@ -58,6 +58,8 @@ footer {
 
 #hfmt_logo:hover {
     cursor: pointer;
+    filter: invert(100%) !important;
+    -webkit-filter: invert(100%) !important;
 }
 
 .logo {
@@ -176,10 +178,6 @@ a:hover {
 #api_menu li:hover {
     color: var(--fg-color);
     cursor: pointer;
-}
-
-#hfmt_logo {
-    height: 100px;
 }
 
 #main_text {
