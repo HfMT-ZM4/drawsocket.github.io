@@ -14,6 +14,8 @@ window.addEventListener("load", ()=> {
 
     let menu = document.getElementById("api_menu");
 
+    let clone = menu.cloneNode(true);
+
     let keyArr = [];
     document.querySelectorAll('.api_key').forEach( e => {
         
@@ -37,15 +39,24 @@ window.addEventListener("load", ()=> {
 
         })
         
-        menu.appendChild(menuItem);
-    })
+        clone.appendChild(menuItem);
+    });
+
+    menu.replaceWith(clone);
+
+    const element = document.querySelector('selector');
+if (element ) {
+  const clone = element.cloneNode(true);
+  element.replaceWith(clone);
+}
+
 
     keyArr.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
     console.log(keyArr);
 
     console.log("adding event listener");
 
-    window.addEventListener("scroll", (event) => {
+    document.addEventListener("scroll", (event) => {
 
         console.log(event);
         let scrollPos = window.scrollY + 100;
