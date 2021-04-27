@@ -37,6 +37,7 @@ title: Index
 
     .drawsocket-web {
         height: 400px;
+        overflow: hidden;
     }
 </style>
 
