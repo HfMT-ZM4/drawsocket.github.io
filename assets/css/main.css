@@ -186,13 +186,21 @@ a:hover {
     top: var(--top-menu-height);
     left: 250px;
     width: calc(100% - 400px - var(--side-margin));
-    height: calc(100% - 50px - var(--top-menu-height));;
-    border-left: 1px dashed pink;
+/*    height: calc(100% - 50px - var(--top-menu-height));; 
+    border-left: 1px dashed pink;*/
     overflow-x: hidden;
     padding-left: 50px;
     padding-bottom: var(--footer-height);
 
 }
+
+#divider_line {
+    position: fixed;
+    left: 250px;
+    height: 100%;
+    border-left: 1px dashed pink;
+}
+
 
 .api_key::before { 
     display: block; 

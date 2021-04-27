@@ -2,7 +2,9 @@
 layout: default
 ---
 
+<!--
 <ul id="api_menu"></ul>
+-->
 
 <div id="main_text"> 
 {{ content }}
@@ -10,11 +12,15 @@ layout: default
 
 
 <script>
+
+let menu;
+
 window.addEventListener("load", ()=> {
 
-    let menu = document.getElementById("api_menu");
+    menu = document.createElement("ul");
+    menu.id = "api_menu";
 
-    let clone = menu.cloneNode(true);
+    //let menu = document.getElementById("api_menu");
 
     let keyArr = [];
     document.querySelectorAll('.api_key').forEach( e => {
@@ -22,43 +28,34 @@ window.addEventListener("load", ()=> {
         let menuItem = document.createElement("li");
         menuItem.classList.add("api_menu_item");
         menuItem.innerHTML = e.innerHTML;
-
+        menuItem.dataset.refid = e.id;
         keyArr.push({
             el: menuItem,
             y: e.getBoundingClientRect().y + window.scrollY
         })
-        
+
+        menu.appendChild(menuItem);
+
         menuItem.addEventListener("click", ()=>{
             window.location.hash = e.id;
 
             document.querySelectorAll(".selected").forEach( s => {
                 s.classList.remove("selected");
-            })
+            });
 
             menuItem.classList.add("selected");
 
         })
         
-        clone.appendChild(menuItem);
     });
 
-    menu.replaceWith(clone);
-
-    const element = document.querySelector('selector');
-if (element ) {
-  const clone = element.cloneNode(true);
-  element.replaceWith(clone);
-}
-
+    document.body.appendChild(menu);
 
     keyArr.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
     console.log(keyArr);
 
-    console.log("adding event listener");
-
     document.addEventListener("scroll", (event) => {
 
-        console.log(event);
         let scrollPos = window.scrollY + 100;
         let idx = 0;
         for( let i = 0; i < keyArr.length-1; i++) {
@@ -75,7 +72,7 @@ if (element ) {
         
         keyArr[idx].el.classList.add("selected");
 
-    });
+    }, { capture: true });
 
 })
 </script>
