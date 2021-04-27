@@ -11,6 +11,10 @@ title: Index
     code {
          background-color: inherit;
     }
+
+    .drawsocket-web {
+        height: 400px;
+    }
 </style>
 
 ```
