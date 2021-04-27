@@ -36,6 +36,7 @@ header {
     z-index: 100;
     background: white;
     top: 10px;
+    cursor: pointer;
 }
 
 .logo img {
@@ -69,6 +70,7 @@ header {
     background: white;
     border: 1px dotted var(--fg-color);
     margin-left: 0px;
+    cursor: pointer;
 }
 
 

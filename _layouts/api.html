@@ -43,8 +43,11 @@ window.addEventListener("load", ()=> {
     keyArr.sort((a,b) => (a.y > b.y) ? 1 : ((b.y > a.y) ? -1 : 0));
     console.log(keyArr);
 
-    document.addEventListener("scroll", (event) => {
+    console.log("adding event listener");
 
+    window.addEventListener("scroll", (event) => {
+
+        console.log(event);
         let scrollPos = window.scrollY + 100;
         let idx = 0;
         for( let i = 0; i < keyArr.length-1; i++) {
@@ -62,7 +65,6 @@ window.addEventListener("load", ()=> {
         keyArr[idx].el.classList.add("selected");
 
     });
-    
 
 })
 </script>
