@@ -36,11 +36,13 @@ title: Index
 
 
 <script>
-    const snippet_code = document.querySelector(".highlight");
-    
+    const snippet_code_block = document.querySelector(".highlight");
+   
+    const snippet_code = snippet_code_block.querySelector("code");
+
     const snippet = JSON.parse(snippet_code.innerHTML);
 
-    snippet_code.addEventListener("click", ()=> {
+    snippet_code_block.addEventListener("click", ()=> {
         console.log("clicked and sending:", snippet);
         drawsocket.input(snippet);
     });
