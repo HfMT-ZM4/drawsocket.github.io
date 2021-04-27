@@ -16,8 +16,7 @@ drawsocket.input({
         fill: blue
     }
 })
-```
-{: class="drawsocket_code" }
+```{: class="drawsocket_code" }
 
 
 {% include drawsocket-web.html %}
