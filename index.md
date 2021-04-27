@@ -31,6 +31,9 @@ title: Index
     
     const snippet = JSON.parse(snippet_code.innerHTML);
 
-    snippet_code.addEventListener("click", ()=> drawsocket.input(snippet) );
+    snippet_code.addEventListener("click", ()=> {
+        console.log("clicked and sending:", snippet);
+        drawsocket.input(snippet) 
+    });
 
 </script>
