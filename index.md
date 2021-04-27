@@ -32,7 +32,7 @@ title: Index
 
 
 <script>
-    const snippet_code = document.querySelector("code");
+    const snippet_code = document.querySelector(".highlight");
     
     const snippet = JSON.parse(snippet_code.innerHTML);
 
