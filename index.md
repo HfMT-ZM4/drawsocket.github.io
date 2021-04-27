@@ -29,7 +29,7 @@ title: Index
 <script>
     const snippet_code = document.querySelector("code");
     
-    const snippet = JSON.parse(snippet_txt.innerHTML);
+    const snippet = JSON.parse(snippet_code.innerHTML);
 
     snippet_code.addEventListener("click", ()=> drawsocket.input(snippet) );
 
