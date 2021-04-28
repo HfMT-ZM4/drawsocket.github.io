@@ -13,6 +13,7 @@ html {
     --side-margin: 25px;
     --bg-color: white;
     --fg-color: pink;
+    --accent-color: #66ff66;
     --footer-height: 100px;
 }
 
@@ -253,4 +254,9 @@ code {
 
 .line_breaks {
     white-space: pre-wrap;
+}
+
+.highlight-note {
+   border: 1px solid var(--accent-color);
+   padding: 20px;
 }
