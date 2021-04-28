@@ -47,17 +47,17 @@ For example:
 There are three levels of inheritance with SVG CSS styling: 
 1. *presentation attributes*, set within the element, as demonstrated above in the context of SVG object attributes.
 2. *stylesheet* definitions, set in an attached CSS stylesheet, or within an `<style>` element in the HTML page (settable via the "css" key detailed below).
-3. *inline styling*, a set of CSS rules included as part of an elements's `style` attribute. In `drawsocket` we set these values via the `/style` sub-bundle.
+3. *inline styling*, a set of CSS rules included as part of an element's `style` attribute. In `drawsocket` we set these values via the `/style` sub-bundle.
    
 Each is overridden by the next: *stylesheets* override *presentation attributes*, and *inline styles* override all the others.
 
-See the [online CSS documentation](https://developer.mozilla.org/en-US/docs/Web/CSS) for more informaiton.
+See the [online CSS documentation](https://developer.mozilla.org/en-US/docs/Web/CSS) for more information.
 
 
 ### SVG Layers
 SVG elements are drawn in the order they are created via the `new` keyword (and remain in layer order if updated after creation).
 
-Sometimes it is useful to separate groups of objects in specific drawing layer order to maintain background, mid, and foreground layers. The can be achived using the SVG group element. 
+Sometimes it is useful to separate groups of objects in specific drawing layer order to maintain background, mid, and foreground layers. The can be achieved using the SVG group element. 
 
 For example, we can first create three layers that we will name "back", "main", and "overlay", using an array of objects.
 
@@ -178,7 +178,7 @@ HTML objects may be used inside SVG using a [foreignObject](https://developer.mo
 ## __clear__ and __remove__
 {: class="api_key"}
 
-The `clear` and `remove` keys have similar, but slightly different behaviours.
+The `clear` and `remove` keys have similar, but slightly different behaviors.
 
 * `remove`: removes the objects matching each of the `ids` set in the `val` field.
 * `clear`: removes the *children* of the object, or key type, specified in the `val` field.
@@ -288,7 +288,7 @@ This is still in beta, but hypothetically the example below should work for a vi
 ### HTML layers
 By default HTML objects will be added to an HTML `div` object, one layer below the SVG content (see the `drawsocket-page.html` file for details). However, HTML content requiring user interaction, for example `input` forms, or media players, will not be clickable if located behind the SVG layer. Therefore a special-purpose, top-layer `div` is set in the HTML file, called `forms` which will should always be reachable by user interaction. Set objects in the `forms` layer just as you would for other parent objects, using the `parent` keyword.
 
-Additionaly, HTML layers may be created with a new `div` tag, just as discussed above via the `g` SVG tag.
+Additionally, HTML layers may be created with a new `div` tag, just as discussed above via the `g` SVG tag.
 
 ## __tween__
 {: class="api_key"}
@@ -302,9 +302,9 @@ Additionaly, HTML layers may be created with a new `div` tag, just as discussed 
 * `vars`: an object containing the variables to animate, and their destination values, and any other TweenMax special properties (see the [TweenMax vars documentation](https://greensock.com/docs/TweenMax/vars) for more information).
 * `cmd`: an action command to a new or preexisting `tween`. Understood commands are:
   * `start`: start playing the `tween`, from the beginning, using the message's timestamp to determine an offset start time to be synchronized with the server clock. If the duration is already past, sets the object to its final position.
-  * `play`: start playing the `tween` from whatever its current position is, synchronised to the server clock.
+  * `play`: start playing the `tween` from whatever its current position is, synchronized to the server clock.
   * `playfrom` : if a `time` parameter is also found in the command object, start playing the `tween` from the time specified by the `time` parameter.
-    * `time` (requried), sets the time to start from in seconds.
+    * `time` (required), sets the time to start from in seconds.
   * `stop`: stops the `tween` at the current position.
   * `pause`: stops the `tween` at the current position.
     * optionally, if the parameter `time` is found, pause, and move the playhead to that time.
@@ -317,7 +317,7 @@ Additionaly, HTML layers may be created with a new `div` tag, just as discussed 
 * `init`: an object of [TimelineMax initialization variables](https://greensock.com/docs/TimelineMax/TimelineMax()).
 * `tweens`: an `tween` object, or *sequential* array of `tween` objects containing the keywords:
   * `target`: a CSS selector to choose which objects are animated (e.g. `#foo`).
-  * `dur`: the duration of the tween animation in seconds, note that within the timeline, the tweens are sequential, so each `dur` is the duration for that section within the timeline.
+  * `dur`: the duration of the tween animation in seconds, note that within the timeline, the `tweens` are sequential, so each `dur` is the duration for that section within the timeline.
   * `vars`: an object containing the variables to animate, and their destination values, and any other TweenMax special properties (see the [TweenMax vars documentation](https://greensock.com/docs/TweenMax/vars) for more information).
 * `cmd`: same as the `tween` commands, but applied to the timeline.
 
@@ -382,10 +382,10 @@ PDF files may be imported into `drawsocket` by reference, the settable attribute
 `drawsocket` includes the [tone.js](https://tonejs.github.io) library, note: __currently in beta__.
 
 Keywords:
-* `new`: creates a new instace of a Tone type (e.g Tone.Oscillator, would be `/new : "Oscillator"`).
+* `new`: creates a new instance of a Tone type (e.g Tone.Oscillator, would be `/new : "Oscillator"`).
 * `id`: unique identifier to use for this sound object.
-* `vars`: an object of variables used on initialization of a Tone.js object, refer to the Tone.js API for for informaiton.
-* `call`: an object or array of objects contains calls to HTML object `method` with optional `args`, see the Tone.js API for more informaiton on object methods.
+* `vars`: an object of variables used on initialization of a Tone.js object, refer to the Tone.js API for for information.
+* `call`: an object or array of objects contains calls to HTML object `method` with optional `args`, see the Tone.js API for more information on object methods.
   * `method`: element method to call.
   * `args`: optional arguments to method call (see note below for methods requiring separated arguments).
   * `then`: optional next method to call on the returned value from the previous call.
@@ -473,7 +473,7 @@ In some cases we need to refer to an object from a library or one that we have c
 
 For this (currently only in the Tone.js interface) you can use the `obj` and `get` message to get an element from an object.
 
-For example, the Tone.js PolySynth needs a member of the Tone libarary to set as the `voice` type. To do this we can use an object argument with the `obj` and `get` keywords, here to to ge the Synth member of the Tone library.
+For example, the Tone.js PolySynth needs a member of the Tone library to set as the `voice` type. To do this we can use an object argument with the `obj` and `get` keywords, here to to ge the Synth member of the Tone library.
 
 ```
 /* : {
@@ -503,7 +503,7 @@ For example, the Tone.js PolySynth needs a member of the Tone libarary to set as
 Clients can load JSON of stored messages, formatted in the `drawsocket` API detailed here.
 
 Keywords:
-* `fetch`: (required) URL of file to fetch relative to the `drawsocket` root html folder (by default this is the same as the folder that the patch containg the `drawsocket` is saved in.,
+* `fetch`: (required) URL of file to fetch relative to the `drawsocket` root html folder (by default this is the same as the folder that the patch containing the `drawsocket` is saved in.,
 * `prefix`: (optional) the URL prefix to load into the page. If no prefix is specified `fetch` will load only the prefix matching the client URL.
   
 For example, here we tell clients logged into the URL `/foo` to load the messages for URL `/bar` from the file "savedState.json".
@@ -555,7 +555,7 @@ For example, the following example, an event is created and set with a delay (`d
 # __do_sync__
 {: class="api_key"}
 
-The `do_sync` keyword triggers the client clock time sychronization routine.
+The `do_sync` keyword triggers the client clock time synchronization routine.
 
 ```
 /foo : {
@@ -663,12 +663,12 @@ For example, here is a button that sends a message to another client on being cl
 ## __in dev keys__
 {: class="api_key"}
 
-* `function`: create and call user defined funcitons from JSON format.
+* `function`: create and call user defined functions from JSON format.
   * `body`, `args`
 
 ```
 {
-  /key : "funciton",
+  /key : "function",
   /val : {
     /args : ["a", "b"],
     /body : "console.log( a + b );"
@@ -676,7 +676,7 @@ For example, here is a button that sends a message to another client on being cl
 }
 ```
 
-* in some object type parsers, the parameters passed an object including the address `/funciton` can be used to create an anonymous function:
+* in some object type parsers, the parameters passed an object including the address `/function` can be used to create an anonymous function:
   
   ```
   /id : "foo",

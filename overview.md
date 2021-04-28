@@ -2,9 +2,23 @@
 layout: api
 ---
 
-some introductory text here
+# Use in production
 
-## Assets
+Note: `drawsocket` has been used in large scale production, but as with all technology, **the system must be tested before use in production**. Users are advised to thoroughly test your production network and display devices before any live performance.
+
+
+# Basic Usage in Max
+
+See the `drawsocket.maxhelp` file for examples.
+
+1. Start the server by sending the `script start` message.
+2. On successful startup, an IP address and port number will be printed to the Max console, and the same information will be sent out of the right-most outlet of the abstraction.
+3. Open a browser and type in the IP address and port specified in the Max patch, followed by a URL of your choosing. This address will be how you address the client browser from the Max server patch. 
+    * For example, if the IP:Port is `192.168.1.1:3002`, and you wanted to use the address `/foo` for your OSC style messaging to the browser, you could type the following address into your browser: `192.168.1.1:3002/foo`. Note that if you are testing on the same computer, you can also use `localhost` instead of the IP address.
+
+For usage with [MaxScore](http://www.computermusicnotation.com), please see `Drawsocket` folder in the Max Extras menu, example number 8, `render2browser.maxscore`.
+
+# Assets
 {: class="api_key"}
 
 If you wish to serve file assets to your client browsers (e.g. images, pdfs, sound files, html files, etc.), the files must be in a known folder to the server, commonly referred to as a root "public" folder. The public folder path is set relative to the location of the Max patch containing the `drawsocket` abstraction, and therefore you need to save your patch before any assets can be found (so that the patch has a folder location).
@@ -113,7 +127,7 @@ For example, in the above example, we we set the `id` to be the name "rectangula
 ## Storing the Sever State
 {: class="api_key"}
 
-The `drawsocket` object in Max accepts the `writecache` message,to write the current cached messages to a file on disk.
+The `drawsocket` object in Max accepts the `writecache` message, to write the current cached messages to a file on disk.
 
 The folder path is relative to the folder path of the patch in which the `drawsocket` object is in.
 
@@ -147,7 +161,7 @@ For example, on a website called `www.foo.com` and a stored JSON file named `sto
 
 `http://www.foo.com/drawsocket-default.html?fetch=stored-cache.json&prefix=/1`
 
-(Of course you could also save the HTML file under a differnt name of your choosing for your server)
+(Of course you could also save the HTML file under a different name of your choosing for your server)
 
 # ping
 {: class="api_key"}

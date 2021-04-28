@@ -8,10 +8,11 @@
     
     <div class="menu_wrapper">
         <div class="menu_item">about</div>
-        <div class="menu_item">intro</div>
-        <div class="menu_item">examples</div>
+        <div class="menu_item">installation</div>
+        <div class="menu_item">overview</div>
         <div class="menu_item">API</div>
-        <div class="menu_item">download</div>
+        <div class="menu_item">examples</div>
+        <div class="menu_item">github</div>
     </div>
     <div id="drawsocket" class="white-on-black-text">drawsocket</div>
 </header>
@@ -31,7 +32,10 @@
             console.log("setting event for ", e);
 
             e.addEventListener("click", ()=>{
-                window.location.href = e.innerHTML.toLowerCase()+".html";
+                if( e.innerHTML == "github" )
+                    window.location.href = "https://github.com/HfMT-ZM4/drawsocket";
+                else
+                    window.location.href = e.innerHTML.toLowerCase()+".html";
             })
         
         });
