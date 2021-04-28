@@ -186,6 +186,7 @@ a:hover {
     top: var(--top-menu-height);
     left: 250px;
     width: calc(100% - 400px - var(--side-margin));
+    max-width: 1000px;
 /*    height: calc(100% - 50px - var(--top-menu-height));; 
     border-left: 1px dashed pink;*/
     overflow-x: visible;
