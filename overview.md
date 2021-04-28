@@ -25,20 +25,21 @@ If you wish to serve file assets to your client browsers (e.g. images, pdfs, sou
 
 By default, the public folder is set to be the same folder that contains the Max patch. 
 ```
-    someFolder
-    |-- yourPatch.maxpatch
-    |-- image.png
-    |-- score.pdf
+   someFolder
+   ├── yourPatch.maxpatch
+   ├── image.png
+   └── score.pdf
 
 ```
+
 
 Alternatively, to keep the folders a little neater, the `drawsocket` abstraction can be initialized with an argument of the folder path relative to the Max patch location. For example, if you initialize `drawsocket` with the relative path `public`, it will expect the folder `public` to be at the same folder level:
 ```
-    someFolder
-    |-- yourPatch.maxpatch
-    |-- public
-        |-- image.png
-        |-- score.pdf
+   someFolder
+   ├── yourPatch.maxpatch
+   └── public
+      ├── image.png
+      └── score.pdf
 
 ```
 
@@ -57,18 +58,22 @@ All messages in the `drawsocket` API are formatted as an object, enclosed by cur
 
 Odot:
 ```
-/bundle : {
-    /subbundle : {
-        /foo : 1
-    }
+{
+   /bundle : {
+       /subbundle : {
+           /foo : 1
+       }
+   }
 }
 ```
-Max Dictionary (JSON):
+JSON (Max Dictionary):
 ```
-"bundle" : {
-    "subbundle" : {
-        "foo" : 1
-    }
+{
+   "bundle" : {
+       "subbundle" : {
+           "foo" : 1
+       }
+   }
 }
 ```
 
